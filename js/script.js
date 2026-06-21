@@ -8,11 +8,13 @@ $(document).ready(function () {
     // ADD TO CART
     // --------------------------
     $(".add-cart").click(function () {
+
         let productName = $(this)
             .closest(".card")
             .find("h6, h5")
             .first()
-            .text().trim();
+            .text()
+            .trim();
 
         alert(productName + " added to cart!");
     });
@@ -21,11 +23,13 @@ $(document).ready(function () {
     // ADD TO WISHLIST
     // --------------------------
     $(".add-wishlist").click(function () {
+
         let productName = $(this)
             .closest(".card")
             .find("h6, h5")
             .first()
-            .text().trim();
+            .text()
+            .trim();
 
         alert(productName + " added to wishlist!");
     });
@@ -41,7 +45,9 @@ $(document).ready(function () {
     // REMOVE FROM CART
     // --------------------------
     $(".remove-btn").click(function () {
+
         $(this).closest(".card").fadeOut(500);
+
         alert("Product removed.");
     });
 
@@ -49,13 +55,16 @@ $(document).ready(function () {
     // LOGIN FORM
     // --------------------------
     $("#loginForm").submit(function (e) {
+
         e.preventDefault();
+
         let email = $("#email").val();
         let password = $("#password").val();
 
         if (email === "" || password === "") {
             alert("Please fill all fields.");
-        } else {
+        }
+        else {
             alert("Login Successful!");
             window.location.href = "index.html";
         }
@@ -65,6 +74,7 @@ $(document).ready(function () {
     // REGISTER FORM
     // --------------------------
     $("#registerForm").submit(function (e) {
+
         e.preventDefault();
 
         let name = $("#name").val();
@@ -73,7 +83,13 @@ $(document).ready(function () {
         let password = $("#password").val();
         let confirm = $("#confirm").val();
 
-        if (name === "" || mobile === "" || email === "" || password === "" || confirm === "") {
+        if (
+            name === "" ||
+            mobile === "" ||
+            email === "" ||
+            password === "" ||
+            confirm === ""
+        ) {
             alert("Please fill all fields.");
             return;
         }
@@ -105,69 +121,90 @@ $(document).ready(function () {
     // SEARCH BOX
     // --------------------------
     $(".search-box input").keyup(function () {
+
         let value = $(this).val().toLowerCase();
 
         $(".product-card").filter(function () {
+
             $(this).toggle(
-                $(this).text().toLowerCase().indexOf(value) > -1
+                $(this)
+                    .text()
+                    .toLowerCase()
+                    .indexOf(value) > -1
             );
+
         });
+
     });
 
-    // --------------------------
-    // CATEGORY HANDLING (Fixed)
-    // --------------------------
-
-    // Prevent click alert on dropdown category (Women Clothing)
-    $(".dropdown-category").click(function (e) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-    });
-
-    // Click handler only for other categories
-    $(".category-item:not(.dropdown-category)").click(function () {
-        let category = $(this).find("p").text().trim() || "Category";
-        alert(category + " selected.");
-    });
-
-    // --------------------------
-    // MEGA MENU TAB SWITCHING
-   // ====================== EXACT MEGA MENU HOVER ======================
-const categoryItems = document.querySelectorAll('.category-item');
-const megaMenu = document.getElementById('megaMenu');
-
-categoryItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        categoryItems.forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
-        megaMenu.style.display = 'block';
-    });
-});
-
-megaMenu.addEventListener('mouseenter', () => {
-    megaMenu.style.display = 'block';
-});
-
-megaMenu.addEventListener('mouseleave', () => {
-    megaMenu.style.display = 'none';
-    categoryItems.forEach(i => i.classList.remove('active'));
-});
-
-document.querySelector('.categories-section').addEventListener('mouseleave', () => {
-    megaMenu.style.display = 'none';
-    categoryItems.forEach(i => i.classList.remove('active'));
-});
     // --------------------------
     // PRODUCT CARD HOVER
     // --------------------------
     $(".product-card").hover(
+
         function () {
             $(this).addClass("shadow-lg");
         },
+
         function () {
             $(this).removeClass("shadow-lg");
         }
+
     );
 
 });
 
+
+// ====================================
+// SHOPSY MULTIPLE MEGA MENU HOVER
+// ====================================
+
+const categoryItems = document.querySelectorAll(".category-item");
+const megaMenus = document.querySelectorAll(".mega-menu");
+const categorySection = document.querySelector(".categories-section");
+
+categoryItems.forEach(item => {
+
+    item.addEventListener("mouseenter", () => {
+
+        // Remove previous active category
+        categoryItems.forEach(cat => {
+            cat.classList.remove("active");
+        });
+
+        // Hide all menus
+        megaMenus.forEach(menu => {
+            menu.classList.remove("show");
+        });
+
+        // Activate current category
+        item.classList.add("active");
+
+        // Get menu name
+        const menuName = item.dataset.menu;
+
+        // Find matching menu
+        const currentMenu =
+            document.getElementById(menuName + "-menu");
+
+        if (currentMenu) {
+            currentMenu.classList.add("show");
+        }
+
+    });
+
+});
+
+// Hide menu when leaving category section
+
+categorySection.addEventListener("mouseleave", () => {
+
+    categoryItems.forEach(cat => {
+        cat.classList.remove("active");
+    });
+
+    megaMenus.forEach(menu => {
+        menu.classList.remove("show");
+    });
+
+});

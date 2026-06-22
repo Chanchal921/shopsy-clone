@@ -1,12 +1,8 @@
-// ============================
 // SHOPSY CLONE SCRIPT
-// ============================
-
 $(document).ready(function () {
 
-    // --------------------------
     // ADD TO CART
-    // --------------------------
+    
     $(".add-cart").click(function () {
 
         let productName = $(this)
@@ -18,10 +14,7 @@ $(document).ready(function () {
 
         alert(productName + " added to cart!");
     });
-
-    // --------------------------
     // ADD TO WISHLIST
-    // --------------------------
     $(".add-wishlist").click(function () {
 
         let productName = $(this)
@@ -33,17 +26,13 @@ $(document).ready(function () {
 
         alert(productName + " added to wishlist!");
     });
-
-    // --------------------------
     // REMOVE FROM WISHLIST
-    // --------------------------
     $(".remove-item").click(function () {
         $(this).closest(".card").fadeOut(500);
     });
 
-    // --------------------------
     // REMOVE FROM CART
-    // --------------------------
+    
     $(".remove-btn").click(function () {
 
         $(this).closest(".card").fadeOut(500);
@@ -51,9 +40,8 @@ $(document).ready(function () {
         alert("Product removed.");
     });
 
-    // --------------------------
     // LOGIN FORM
-    // --------------------------
+  
     $("#loginForm").submit(function (e) {
 
         e.preventDefault();
@@ -70,9 +58,8 @@ $(document).ready(function () {
         }
     });
 
-    // --------------------------
     // REGISTER FORM
-    // --------------------------
+   
     $("#registerForm").submit(function (e) {
 
         e.preventDefault();
@@ -103,23 +90,20 @@ $(document).ready(function () {
         window.location.href = "login.html";
     });
 
-    // --------------------------
+    
     // PLACE ORDER
-    // --------------------------
+   
     $(".place-order").click(function () {
         alert("Order Placed Successfully!");
     });
 
-    // --------------------------
     // BUY NOW
-    // --------------------------
     $(".buy-now").click(function () {
         alert("Proceeding to Checkout...");
     });
 
-    // --------------------------
     // SEARCH BOX
-    // --------------------------
+  
     $(".search-box input").keyup(function () {
 
         let value = $(this).val().toLowerCase();
@@ -137,9 +121,7 @@ $(document).ready(function () {
 
     });
 
-    // --------------------------
     // PRODUCT CARD HOVER
-    // --------------------------
     $(".product-card").hover(
 
         function () {
@@ -154,10 +136,8 @@ $(document).ready(function () {
 
 });
 
-
-// ====================================
 // SHOPSY MULTIPLE MEGA MENU HOVER
-// ====================================
+
 
 const categoryItems = document.querySelectorAll(".category-item");
 const megaMenus = document.querySelectorAll(".mega-menu");

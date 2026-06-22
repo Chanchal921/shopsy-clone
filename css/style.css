@@ -190,8 +190,9 @@ body{
     font-size:14px;
     padding:8px 0;
     transition:0.2s;
-   cursor: pointer;
+
 }
+
 
 .menu-column a:hover{
     color:#2874f0;
@@ -506,4 +507,105 @@ body{
 
 .category-item.active p i{
     transform:rotate(180deg);
+}
+
+
+/* ======= */
+.footer-dark {
+    background: #212121;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.footer-dark h6 {
+    color: #878787;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.footer-dark p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    color: #d1d1d1;
+}
+
+.footer-dark p:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Vertical Border */
+.border-start {
+    border-left: 1px solid #454d5e !important;
+}
+
+/* Main Footer Row */
+.footer-row {
+    padding: 22px 0 16px;
+}
+
+.footer-row > div {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Office Address Text */
+.office-text {
+    line-height: 1.42;
+    font-size: 13px;
+    color: #d1d1d1;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid #454d5e;
+    padding: 8px 0 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #c3c3c3;
+}
+
+.footer-bottom div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-bottom i {
+    color: #f5c518;
+    font-size: 15px;
+}
+
+.payment-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.payment-icons img {
+    height: 18px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .border-start {
+        border-left: none !important;
+        padding-left: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }

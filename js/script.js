@@ -187,4 +187,4 @@ categorySection.addEventListener("mouseleave", () => {
         menu.classList.remove("show");
     });
 
-});
+});        

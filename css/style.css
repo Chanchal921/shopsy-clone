@@ -190,6 +190,7 @@ body{
     font-size:14px;
     padding:8px 0;
     transition:0.2s;
+   cursor: pointer;
 }
 
 .menu-column a:hover{

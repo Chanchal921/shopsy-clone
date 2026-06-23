@@ -609,3 +609,35 @@ body{
         text-align: center;
     }
 }
+
+
+.product-left{
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+}
+
+#productImage{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+
+
+
+body{
+    overflow-x: hidden;
+}
+.progress {
+    background: #eeeeee;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    border-radius: 20px;
+}
+
+.border.p-4 {
+    padding: 25px !important;
+}

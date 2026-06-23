@@ -79,8 +79,8 @@
         <!-- LEFT -->
 
 <div class="col-lg-4">
+    <div class="product-left sticky-image">
 
-    <div class="product-left">
 
         <div class="card p-3">
 
@@ -94,7 +94,7 @@
 
             <div class="col-6">
 
-                <button class="btn btn-warning w-100 py-3">
+                <button class="btn btn-warning w-100 py-3 add-cart">
                     <i class="bi bi-cart3"></i>
                     ADD TO CART
                 </button>
@@ -103,7 +103,7 @@
 
             <div class="col-6">
 
-                <button class="btn btn-danger w-100 py-3">
+                <button class="btn btn-danger w-100 py-3 buy-now">
                     <i class="bi bi-lightning-fill"></i>
                     BUY NOW
                 </button>
@@ -111,8 +111,8 @@
             </div>
 
         </div>
-
-    </div>
+</div>
+    
 
 </div>
         <!-- RIGHT -->
@@ -149,12 +149,12 @@
 
 <div class="mt-3">
 
-    <span class="badge bg-success">
-        4.3 ★
+    <span class="badge bg-success" id="productRatingBadge">
+        0 ★
     </span>
 
-    <span class="text-muted ms-2">
-        5311 Ratings & 173 Reviews
+    <span class="text-muted ms-2" id="productRatingSummary">
+        0 Ratings & 0 Reviews
     </span>
 
 </div>
@@ -162,25 +162,7 @@
 
 <h5>Size</h5>
 
-<div class="d-flex gap-3 mt-3">
-
-    <button class="btn btn-outline-dark">
-        S
-    </button>
-
-    <button class="btn btn-outline-dark">
-        M
-    </button>
-
-    <button class="btn btn-outline-dark">
-        L
-    </button>
-
-    <button class="btn btn-outline-dark">
-        XL
-    </button>
-
-</div>
+<div class="d-flex gap-3 mt-3" id="productSizes"></div>
 <hr>
 
 <hr>
@@ -195,80 +177,18 @@
 
         <div class="col-md-3 text-center border-end">
 
-            <h2 class="text-success mb-1">
+            <h2 class="text-success mb-1" id="productRatingStars">
                 ★★★★<span class="text-secondary">★</span>
             </h2>
 
-            <small class="text-muted">
-                5311 ratings <br>
-                173 reviews
+            <small class="text-muted" id="productRatingCounts">
+                0 ratings <br>
+                0 reviews
             </small>
 
         </div>
 
-        <div class="col-md-9">
-
-            <div class="d-flex align-items-center mb-2">
-                <small class="me-2">5★</small>
-
-                <div class="progress flex-grow-1" style="height:8px;">
-                    <div class="progress-bar bg-success"
-                         style="width:90%">
-                    </div>
-                </div>
-
-                <small class="ms-2">2520</small>
-            </div>
-
-            <div class="d-flex align-items-center mb-2">
-                <small class="me-2">4★</small>
-
-                <div class="progress flex-grow-1" style="height:8px;">
-                    <div class="progress-bar bg-success"
-                         style="width:75%">
-                    </div>
-                </div>
-
-                <small class="ms-2">1012</small>
-            </div>
-
-            <div class="d-flex align-items-center mb-2">
-                <small class="me-2">3★</small>
-
-                <div class="progress flex-grow-1" style="height:8px;">
-                    <div class="progress-bar bg-success"
-                         style="width:55%">
-                    </div>
-                </div>
-
-                <small class="ms-2">666</small>
-            </div>
-
-            <div class="d-flex align-items-center mb-2">
-                <small class="me-2">2★</small>
-
-                <div class="progress flex-grow-1" style="height:8px;">
-                    <div class="progress-bar bg-warning"
-                         style="width:35%">
-                    </div>
-                </div>
-
-                <small class="ms-2">348</small>
-            </div>
-
-            <div class="d-flex align-items-center">
-                <small class="me-2">1★</small>
-
-                <div class="progress flex-grow-1" style="height:8px;">
-                    <div class="progress-bar bg-danger"
-                         style="width:20%">
-                    </div>
-                </div>
-
-                <small class="ms-2">765</small>
-            </div>
-
-        </div>
+        <div class="col-md-9" id="productRatingBars"></div>
 
     </div>
 
@@ -276,113 +196,38 @@
 
 <hr>
 
-<div>
-
-    <h5>
-        ★★★★★ Excellent
-    </h5>
-
-    <p>
-        Nice product and comfortable.
-    </p>
-
-    <small class="text-muted">
-        Rahul Kumar
-    </small>
-
-</div>
+<div id="productReviews"></div>
 <hr>
 
 <h4>Questions & Answers</h4>
 
-<p>
-    <strong>Q:</strong> Is Cash On Delivery available?
-</p>
+<div id="productQuestions"></div>
 
-<p>
-    <strong>A:</strong> Yes.
+<span class="badge bg-success p-2" id="productRatingBadgeLarge">
+    0 ★
+</span>
+
+<hr>
+
+<h5>Available Offers</h5>
+
+<ul id="productOffers"></ul>
+
+<hr>
+
+<h5>Description</h5>
+
+<p id="productDescription">
+
+    Product Description
+
 </p>
 
 <hr>
 
-<p>
-    <strong>Q:</strong> Is this washable?
-</p>
+<h5>Specifications</h5>
 
-<p>
-    <strong>A:</strong> Yes, it is washable.
-</p>
-
-    <span class="badge bg-success p-2">
-        4.3 ★
-    </span>
-
-    <hr>
-
-    <h5>Available Offers</h5>
-
-    <ul>
-
-        <li>
-            Bank Offer 10% Instant Discount
-        </li>
-
-        <li>
-            Free Delivery Available
-        </li>
-
-        <li>
-            Cash On Delivery Available
-        </li>
-
-        <li>
-            7 Days Return Policy
-        </li>
-
-    </ul>
-
-    <hr>
-
-    <h5>Description</h5>
-
-    <p id="productDescription">
-
-        Product Description
-
-    </p>
-
-    <hr>
-
-    <h5>Specifications</h5>
-
-    <table class="table">
-
-        <tr>
-            <th>Brand</th>
-            <td>Shopsy Fashion</td>
-        </tr>
-
-        <tr>
-            <th>Color</th>
-            <td>Blue</td>
-        </tr>
-
-        <tr>
-            <th>Material</th>
-            <td>Premium Quality</td>
-        </tr>
-
-        <tr>
-            <th>Ideal For</th>
-            <td>Men/Women</td>
-        </tr>
-
-        <tr>
-            <th>Occasion</th>
-            <td>Casual</td>
-        </tr>
-
-    </table>
+<table class="table" id="productSpecs"></table>
     <hr class="mt-5">
 
 
@@ -391,99 +236,7 @@
 </div>
 
 <!-- RELATED PRODUCTS -->
-
-
-<!-- FOOTER -->
-<footer class="footer-dark">
-    <div class="container-fluid px-5">
-        <div class="row footer-row g-0">   <!-- g-0 removes extra gutters -->
-
-            <!-- ABOUT -->
-            <div class="col-lg-1 col-md-6 mb-3">
-                <h6>ABOUT</h6>
-                <p>Contact Us</p>
-                <p>Careers</p>
-                <p>About Us</p>
-                <p>Press</p>
-            </div>
-
-            <!-- HELP -->
-            <div class="col-lg-1 col-md-6 mb-3">
-                <h6>HELP</h6>
-                <p>Payments</p>
-                <p>Shipping</p>
-                <p>Cancellation & Returns</p>
-                <p>FAQ</p>
-            </div>
-
-            <!-- CONSUMER POLICY -->
-            <div class="col-lg-2 col-md-6 mb-3">
-                <h6>CONSUMER POLICY</h6>
-                <p>Terms Of Use</p>
-                <p>Privacy</p>
-                <p>Sitemap</p>
-                <p>Grievance Redressal</p>
-                <p>EPR Compliance</p>
-                <p>FSSAI Food Safety Connect App</p>
-            </div>
-
-            <!-- SOCIAL -->
-            <div class="col-lg-1 col-md-6 mb-3">
-                <h6>SOCIAL</h6>
-                <p>Facebook</p>
-                <p>Instagram</p>
-                <p>Twitter</p>
-                <p>YouTube</p>
-            </div>
-
-            <!-- MAIL US -->
-            <div class="col-lg-3 col-md-6 mb-3 border-start ps-4">
-                <h6>Mail Us:</h6>
-                <p class="office-text">
-                    Flipkart Internet Private Limited,<br>
-                    Buildings Alyssa, Begonia &<br>
-                    Clove Embassy Tech Village,<br>
-                    Outer Ring Road,<br>
-                    Devarabeesanahalli Village,<br>
-                    Bengaluru, 560103,<br>
-                    Karnataka, India
-                </p>
-            </div>
-
-            <!-- REGISTERED OFFICE -->
-            <div class="col-lg-4 col-md-6 mb-3">
-                <h6>Registered Office Address:</h6>
-                <p class="office-text">
-                    Flipkart Internet Private Limited,<br>
-                    Buildings Alyssa, Begonia &<br>
-                    Clove Embassy Tech Village,<br>
-                    Outer Ring Road,<br>
-                    Devarabeesanahalli Village,<br>
-                    Bengaluru, 560103,<br>
-                    Karnataka, India<br><br>
-                    CIN : U51109KA2012PTC066107<br>
-                    Telephone: <span class="text-primary">044-45614700</span>
-                </p>
-            </div>
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <div><i class="bi bi-shop"></i> Become a Seller</div>
-            <div><i class="bi bi-question-circle"></i> Help Center</div>
-            <div>© 2020-2026 Shopsy.in</div>
-            <div class="payment-icons">
-                <img src="assets/images/visa.png" alt="Visa">
-                <img src="assets/images/mastercard.png" alt="Mastercard">
-                <img src="assets/images/maestro.png" alt="Maestro">
-                <img src="assets/images/discover.png" alt="Discover">
-                <img src="assets/images/rupay.png" alt="RuPay">
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- <div class="container py-5">
+<div class="container py-5">
 
     <h3 class="mb-4">
         Similar Products
@@ -613,81 +366,676 @@
 
     </div>
 
-</div> -->
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-dark">
+    <div class="container-fluid px-5">
+        <div class="row footer-row g-0">   <!-- g-0 removes extra gutters -->
+
+            <!-- ABOUT -->
+            <div class="col-lg-1 col-md-6 mb-3">
+                <h6>ABOUT</h6>
+                <p>Contact Us</p>
+                <p>Careers</p>
+                <p>About Us</p>
+                <p>Press</p>
+            </div>
+
+            <!-- HELP -->
+            <div class="col-lg-1 col-md-6 mb-3">
+                <h6>HELP</h6>
+                <p>Payments</p>
+                <p>Shipping</p>
+                <p>Cancellation & Returns</p>
+                <p>FAQ</p>
+            </div>
+
+            <!-- CONSUMER POLICY -->
+            <div class="col-lg-2 col-md-6 mb-3">
+                <h6>CONSUMER POLICY</h6>
+                <p>Terms Of Use</p>
+                <p>Privacy</p>
+                <p>Sitemap</p>
+                <p>Grievance Redressal</p>
+                <p>EPR Compliance</p>
+                <p>FSSAI Food Safety Connect App</p>
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="col-lg-1 col-md-6 mb-3">
+                <h6>SOCIAL</h6>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+                <p>YouTube</p>
+            </div>
+
+            <!-- MAIL US -->
+            <div class="col-lg-3 col-md-6 mb-3 border-start ps-4">
+                <h6>Mail Us:</h6>
+                <p class="office-text">
+                    Flipkart Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road,<br>
+                    Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India
+                </p>
+            </div>
+
+            <!-- REGISTERED OFFICE -->
+            <div class="col-lg-4 col-md-6 mb-3">
+                <h6>Registered Office Address:</h6>
+                <p class="office-text">
+                    Flipkart Internet Private Limited,<br>
+                    Buildings Alyssa, Begonia &<br>
+                    Clove Embassy Tech Village,<br>
+                    Outer Ring Road,<br>
+                    Devarabeesanahalli Village,<br>
+                    Bengaluru, 560103,<br>
+                    Karnataka, India<br><br>
+                    CIN : U51109KA2012PTC066107<br>
+                    Telephone: <span class="text-primary">044-45614700</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div><i class="bi bi-shop"></i> Become a Seller</div>
+            <div><i class="bi bi-question-circle"></i> Help Center</div>
+            <div>© 2020-2026 Shopsy.in</div>
+            <div class="payment-icons">
+                <img src="assets/images/visa.png" alt="Visa">
+                <img src="assets/images/mastercard.png" alt="Mastercard">
+                <img src="assets/images/maestro.png" alt="Maestro">
+                <img src="assets/images/discover.png" alt="Discover">
+                <img src="assets/images/rupay.png" alt="RuPay">
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script>
-
 const products = {
-
     1: {
         name: "Women's Slipper",
         price: "₹79",
         oldPrice: "₹499",
         image: "assets/images/product1.jpg",
-        description: "Comfortable slippers for daily use."
+        description: "Comfortable slippers with cushioned support for everyday indoor wear.",
+        rating: 4.3,
+        ratingCount: 5311,
+        reviewCount: 173,
+        color: "Navy Blue",
+        material: "Premium Synthetic",
+        brand: "Shopsy Fashion",
+        questions: [
+            { question: "Is Cash On Delivery available?", answer: "Yes." },
+            { question: "Is this washable?", answer: "Yes, it is washable." }
+        ],
+        specifications: {
+            Brand: "Shopsy Fashion",
+            Color: "Blue",
+            Material: "Premium Quality Synthetic",
+            "Ideal For": "Women",
+            Occasion: "Casual"
+        },
+        sizes: ["S", "M", "L", "XL"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "Cash On Delivery Available",
+            "7 Days Return Policy"
+        ],
+        reviews: [
+            { title: "★★★★★ Excellent", text: "Nice product and comfortable.", author: "Rahul Kumar" },
+            { title: "★★★★☆ Very Good", text: "Soft and fits perfectly for daily use.", author: "Anjali Sharma" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 90, count: 2520 },
+            { stars: 4, percent: 75, count: 1012 },
+            { stars: 3, percent: 55, count: 666 },
+            { stars: 2, percent: 35, count: 348 },
+            { stars: 1, percent: 20, count: 765 }
+        ]
     },
-
     2: {
         name: "School Backpack",
         price: "₹199",
-        oldPrice: "₹999",
+        oldPrice: "₹899",
         image: "assets/images/product2.jpg",
-        description: "Stylish backpack for college and travel."
+        description: "A durable backpack with multiple compartments for school, college, and travel.",
+        rating: 4.1,
+        ratingCount: 2104,
+        reviewCount: 90,
+        color: "Jet Black",
+        material: "Polyester",
+        brand: "Campus Gear",
+        questions: [
+            { question: "Does it fit a 15-inch laptop?", answer: "Yes, comfortably." },
+            { question: "Is the material water resistant?", answer: "Yes, slightly water resistant." }
+        ],
+        specifications: {
+            Brand: "Campus Gear",
+            Color: "Black",
+            Material: "Polyester",
+            "Ideal For": "Students",
+            Occasion: "Casual"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 5% Instant Discount",
+            "Extra 10% off on ICICI Bank Cards",
+            "Free Delivery Available"
+        ],
+        reviews: [
+            { title: "★★★★☆ Great Value", text: "Strong and roomy backpack for daily use.", author: "Vikram Patel" },
+            { title: "★★★★☆ Good Choice", text: "Comfortable straps and good storage.", author: "Nisha Verma" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 65, count: 1367 },
+            { stars: 4, percent: 20, count: 420 },
+            { stars: 3, percent: 8, count: 168 },
+            { stars: 2, percent: 4, count: 84 },
+            { stars: 1, percent: 3, count: 55 }
+        ]
     },
-
     3: {
         name: "Silver Necklace",
         price: "₹39",
-        oldPrice: "₹450",
+        oldPrice: "₹499",
         image: "assets/images/product3.jpg",
-        description: "Beautiful silver necklace."
+        description: "Elegant silver-plated necklace for parties and special occasions.",
+        rating: 4.4,
+        ratingCount: 980,
+        reviewCount: 54,
+        color: "Silver",
+        material: "Alloy",
+        brand: "Sparkle Jewellery",
+        questions: [
+            { question: "Is it hypoallergenic?", answer: "Yes, it is skin friendly." },
+            { question: "Does it come with a pouch?", answer: "Yes, it comes in a gift pouch." }
+        ],
+        specifications: {
+            Brand: "Sparkle Jewellery",
+            Color: "Silver",
+            Material: "Alloy",
+            "Ideal For": "Women",
+            Occasion: "Parties"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 15% Instant Discount",
+            "No Cost EMI Available",
+            "Free Delivery Available"
+        ],
+        reviews: [
+            { title: "★★★★★ Gorgeous", text: "Looks beautiful and feels lightweight.", author: "Seema Joshi" },
+            { title: "★★★★☆ Lovely", text: "Perfect for gifting and evening wear.", author: "Priya Menon" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 70, count: 686 },
+            { stars: 4, percent: 18, count: 176 },
+            { stars: 3, percent: 7, count: 69 },
+            { stars: 2, percent: 3, count: 29 },
+            { stars: 1, percent: 2, count: 20 }
+        ]
     },
-
     4: {
         name: "Women's Handbag",
         price: "₹349",
         oldPrice: "₹999",
         image: "assets/images/product4.jpg",
-        description: "Premium handbag."
+        description: "Stylish handbag with enough space for daily essentials.",
+        rating: 4.2,
+        ratingCount: 2402,
+        reviewCount: 112,
+        color: "Brown",
+        material: "Faux Leather",
+        brand: "Style Avenue",
+        questions: [
+            { question: "Can it fit a wallet and phone?", answer: "Yes, easily." },
+            { question: "Does the strap detach?", answer: "Yes, the strap is detachable." }
+        ],
+        specifications: {
+            Brand: "Style Avenue",
+            Color: "Brown",
+            Material: "Faux Leather",
+            "Ideal For": "Women",
+            Occasion: "Formal"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "Cash On Delivery Available"
+        ],
+        reviews: [
+            { title: "★★★★☆ Stylish", text: "Great handbag with perfect size and finish.", author: "Meera Nair" },
+            { title: "★★★★☆ Very Nice", text: "Looks premium and holds all essentials.", author: "Sonal Agarwal" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 60, count: 1441 },
+            { stars: 4, percent: 22, count: 529 },
+            { stars: 3, percent: 10, count: 240 },
+            { stars: 2, percent: 5, count: 120 },
+            { stars: 1, percent: 3, count: 72 }
+        ]
     },
-     5: {
+    5: {
         name: "Wall Painting",
-        price: "₹90",
-        oldPrice: "₹399",
+        price: "₹169",
+        oldPrice: "₹599",
         image: "assets/images/product5.jpg",
-        description: "Beautiful decorative wall painting."
+        description: "Artistic wall painting to brighten living spaces.",
+        rating: 4.5,
+        ratingCount: 730,
+        reviewCount: 48,
+        color: "Multicolor",
+        material: "Canvas",
+        brand: "Home Decor",
+        questions: [
+            { question: "Is it ready to hang?", answer: "Yes, it comes with hanging accessories." },
+            { question: "Is the frame included?", answer: "The painting is framed." }
+        ],
+        specifications: {
+            Brand: "Home Decor",
+            Color: "Multicolor",
+            Material: "Canvas",
+            "Ideal For": "Home",
+            Occasion: "Decor"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "7 Days Return Policy"
+        ],
+        reviews: [
+            { title: "★★★★★ Beautiful", text: "Adds a wonderful look to the room.", author: "Pooja Sharma" },
+            { title: "★★★★☆ Nice", text: "Great print quality and color.", author: "Rohit Singh" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 72, count: 526 },
+            { stars: 4, percent: 15, count: 110 },
+            { stars: 3, percent: 8, count: 58 },
+            { stars: 2, percent: 3, count: 22 },
+            { stars: 1, percent: 2, count: 14 }
+        ]
+    },
+    6: {
+        name: "Gold Diamond Necklace",
+        price: "₹479",
+        oldPrice: "₹1499",
+        image: "assets/images/product6.jpg",
+        description: "Elegant gold diamond necklace for special occasions.",
+        rating: 4.4,
+        ratingCount: 1830,
+        reviewCount: 86,
+        color: "Gold",
+        material: "Gold Plated Alloy",
+        brand: "Kalyan Jewellers",
+        questions: [
+            { question: "Is it suitable for daily wear?", answer: "Yes, it's designed for both special occasions and daily wear." },
+            { question: "Do they have good grip?", answer: "Yes, the sole has excellent traction." }
+        ],
+        specifications: {
+            Brand: "Kalyan Jewellers",
+            Color: "Gold",
+            Material: "Gold Plated Alloy",
+            "Ideal For": "Women",
+            Occasion: "Special Occasions"
+        },
+        sizes: ["7", "8", "9", "10", "11"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "No Cost EMI Available",
+            "Free Delivery Available"
+        ],
+        reviews: [
+            { title: "★★★★★ Comfortable", text: "Great shoes for running and workouts.", author: "Deepak Rao" },
+            { title: "★★★★☆ Good Fit", text: "Very comfortable and stylish.", author: "Akash Gupta" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 68, count: 1244 },
+            { stars: 4, percent: 18, count: 329 },
+            { stars: 3, percent: 8, count: 146 },
+            { stars: 2, percent: 4, count: 73 },
+            { stars: 1, percent: 2, count: 38 }
+        ]
+    },
+    7: {
+        name: "Smart Watch",
+        price: "₹549",
+        oldPrice: "₹2999",
+        image: "assets/images/product7.jpg",
+        description: "Feature-packed smart watch with health trackers and notifications.",
+        rating: 4.3,
+        ratingCount: 1502,
+        reviewCount: 61,
+        color: "Black",
+        material: "Silicone",
+        brand: "TimeTech",
+        questions: [
+            { question: "Is it compatible with Android?", answer: "Yes, it works with Android and iOS." },
+            { question: "Does it have a heart rate monitor?", answer: "Yes, it includes heart rate tracking." }
+        ],
+        specifications: {
+            Brand: "TimeTech",
+            Color: "Black",
+            Material: "Silicone Strap",
+            "Ideal For": "Men/Women",
+            Occasion: "Fitness"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 12% Instant Discount",
+            "No Cost EMI Available",
+            "Free Delivery Available"
+        ],
+        reviews: [
+            { title: "★★★★☆ Very Good", text: "Great features for an everyday watch.", author: "Ritu Bose" },
+            { title: "★★★★☆ Nice Battery", text: "Battery lasts long and setup was easy.", author: "Sanjay Mehta" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 62, count: 931 },
+            { stars: 4, percent: 20, count: 300 },
+            { stars: 3, percent: 10, count: 150 },
+            { stars: 2, percent: 5, count: 75 },
+            { stars: 1, percent: 3, count: 46 }
+        ]
+    },
+    8: {
+        name: "Charcol face wash",
+        price: "₹399",
+        oldPrice: "₹999",
+        image: "assets/images/product8.jpg",
+        description: "Gentle charcoal face wash for deep cleansing and refreshing skin.",
+        rating: 4.2,
+        ratingCount: 1110,
+        reviewCount: 74,
+        color: "Black",
+        Chemical: "Charcoal Extract",
+        brand: "Nyka",
+        questions: [
+            { question: "Is it suitable for sensitive skin?", answer: "Yes, it's gentle and formulated for all skin types." },
+            { question: "Does it have a pleasant scent?", answer: "Yes, it has a refreshing fragrance." }
+        ],
+        specifications: {
+            Brand: "Nyka",
+            Color: "Black",
+            Chemical: "Charcoal Extract",
+            "Ideal For": "All Skin Types",
+            Occasion: "Daily Use"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "7 Days Return Policy"
+        ],
+        reviews: [
+            { title: "★★★★☆ Good Sound", text: "Loud and clear for the price.", author: "Ananya Rao" },
+            { title: "★★★★☆ Portable", text: "Easy to carry and charges fast.", author: "Rohan Das" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 58, count: 643 },
+            { stars: 4, percent: 24, count: 266 },
+            { stars: 3, percent: 10, count: 111 },
+            { stars: 2, percent: 5, count: 56 },
+            { stars: 1, percent: 3, count: 34 }
+        ]
+    },
+    9: {
+        name: "T-Shirt",
+        price: "₹199",
+        oldPrice: "₹799",
+        image: "assets/images/product9.jpg",
+        description: "Classic cotton t-shirt available in multiple sizes and colors.",
+        rating: 4.1,
+        ratingCount: 1720,
+        reviewCount: 81,
+        color: "White",
+        material: "Cotton",
+        brand: "Basics",
+        questions: [
+            { question: "Is the fabric soft?", answer: "Yes, it is made from soft cotton." },
+            { question: "Are multiple colors available?", answer: "Yes, check the product page." }
+        ],
+        specifications: {
+            Brand: "Basics",
+            Color: "White",
+            Material: "Cotton",
+            "Ideal For": "Men",
+            Occasion: "Casual"
+        },
+        sizes: ["S", "M", "L", "XL"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "Cash On Delivery Available"
+        ],
+        reviews: [
+            { title: "★★★★☆ Comfortable", text: "Soft fabric and nice fit.", author: "Arun Kumar" },
+            { title: "★★★★☆ Good Quality", text: "Value for money t-shirt.", author: "Sonia Shetty" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 55, count: 946 },
+            { stars: 4, percent: 26, count: 447 },
+            { stars: 3, percent: 11, count: 189 },
+            { stars: 2, percent: 5, count: 86 },
+            { stars: 1, percent: 3, count: 52 }
+        ]
+    },
+    10: {
+        name: "Headphones",
+        price: "₹429",
+        oldPrice: "₹1299",
+        image: "assets/images/product10.jpg",
+        description: "Wireless headphones with deep bass and clear sound.",
+        rating: 4.4,
+        ratingCount: 1360,
+        reviewCount: 92,
+        color: "White",
+        material: "Plastic",
+        brand: "AudioMax",
+        questions: [
+            { question: "Are they noise cancelling?", answer: "They offer passive noise isolation." },
+            { question: "How long is battery life?", answer: "Up to 8 hours." }
+        ],
+        specifications: {
+            Brand: "AudioMax",
+            Color: "White",
+            Material: "Plastic",
+            "Ideal For": "Music",
+            Occasion: "Travel"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "7 Days Return Policy"
+        ],
+        reviews: [
+            { title: "★★★★☆ Great Sound", text: "Bass is strong and voice is clear.", author: "Rita Jain" },
+            { title: "★★★★☆ Comfortable", text: "Good fit for long listening sessions.", author: "Kunal Shah" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 67, count: 911 },
+            { stars: 4, percent: 18, count: 245 },
+            { stars: 3, percent: 9, count: 122 },
+            { stars: 2, percent: 4, count: 54 },
+            { stars: 1, percent: 2, count: 28 }
+        ]
+    },
+    11: {
+        name: "Coffee Mug",
+        price: "₹129",
+        oldPrice: "₹299",
+        image: "assets/images/product11.jpg",
+        description: "Ceramic coffee mug with a modern finish.",
+        rating: 4.0,
+        ratingCount: 680,
+        reviewCount: 42,
+        color: "White",
+        material: "Ceramic",
+        brand: "Morning Brew",
+        questions: [
+            { question: "Is it microwave safe?", answer: "Yes, it is microwave safe." },
+            { question: "What is the capacity?", answer: "350 ml." }
+        ],
+        specifications: {
+            Brand: "Morning Brew",
+            Color: "White",
+            Material: "Ceramic",
+            "Ideal For": "Home",
+            Occasion: "Daily Use"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "7 Days Return Policy"
+        ],
+        reviews: [
+            { title: "★★★★☆ Nice Mug", text: "Perfect for tea and coffee.", author: "Maya Kapoor" },
+            { title: "★★★★☆ Durable", text: "Sturdy and good quality ceramic.", author: "Amit Desai" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 50, count: 340 },
+            { stars: 4, percent: 22, count: 150 },
+            { stars: 3, percent: 14, count: 95 },
+            { stars: 2, percent: 8, count: 54 },
+            { stars: 1, percent: 6, count: 41 }
+        ]
+    },
+    12: {
+        name: "Kitchen Set",
+        price: "₹269",
+        oldPrice: "₹899",
+        image: "assets/images/product12.jpg",
+        description: "Essential kitchen set with durable utensils for daily cooking.",
+        rating: 4.6,
+        ratingCount: 980,
+        reviewCount: 68,
+        color: "Silver",
+        material: "Stainless Steel",
+        brand: "Home Chef",
+        questions: [
+            { question: "Is it rust proof?", answer: "Yes, the stainless steel is rust resistant." },
+            { question: "Does it include lids?", answer: "Yes, it includes lids for pots." }
+        ],
+        specifications: {
+            Brand: "Home Chef",
+            Color: "Silver",
+            Material: "Stainless Steel",
+            "Ideal For": "Kitchen",
+            Occasion: "Cooking"
+        },
+        sizes: ["One Size"],
+        offers: [
+            "Bank Offer 10% Instant Discount",
+            "Free Delivery Available",
+            "7 Days Return Policy"
+        ],
+        reviews: [
+            { title: "★★★★★ Excellent Set", text: "Very handy and durable kitchen set.", author: "Neha Singh" },
+            { title: "★★★★☆ Very Good", text: "Good quality items for the price.", author: "Tarun Jain" }
+        ],
+        ratingBreakdown: [
+            { stars: 5, percent: 75, count: 735 },
+            { stars: 4, percent: 15, count: 147 },
+            { stars: 3, percent: 6, count: 59 },
+            { stars: 2, percent: 3, count: 29 },
+            { stars: 1, percent: 1, count: 10 }
+        ]
     }
-
 };
 
+function renderStars(rating) {
+    const fullStars = Math.floor(rating);
+    const emptyStars = 5 - fullStars;
+    return "★".repeat(fullStars) + "<span class=\"text-secondary\">" + "★".repeat(emptyStars) + "</span>";
+}
+
+function renderProduct(product) {
+    document.title = `${product.name} | Shopsy`;
+    document.getElementById("productName").innerText = product.name;
+    document.getElementById("productPrice").innerText = product.price;
+    document.getElementById("productOldPrice").innerText = product.oldPrice;
+    document.getElementById("productImage").src = product.image;
+    document.getElementById("productImage").alt = product.name;
+    document.getElementById("productDescription").innerText = product.description;
+    document.getElementById("productRatingBadge").innerText = `${product.rating} ★`;
+    document.getElementById("productRatingSummary").innerText = `${product.ratingCount} Ratings & ${product.reviewCount} Reviews`;
+    document.getElementById("productRatingStars").innerHTML = renderStars(product.rating);
+    document.getElementById("productRatingCounts").innerHTML = `${product.ratingCount} ratings <br> ${product.reviewCount} reviews`;
+    document.getElementById("productRatingBadgeLarge").innerText = `${product.rating} ★`;
+
+    document.getElementById("productSizes").innerHTML = product.sizes
+        .map(size => `<button class="btn btn-outline-dark">${size}</button>`)
+        .join("");
+
+    document.getElementById("productRatingBars").innerHTML = product.ratingBreakdown
+        .map(item => `
+            <div class="d-flex align-items-center mb-2">
+                <small class="me-2">${item.stars}★</small>
+                <div class="progress flex-grow-1" style="height:8px;">
+                    <div class="progress-bar bg-success" style="width:${item.percent}%"></div>
+                </div>
+                <small class="ms-2">${item.count}</small>
+            </div>
+        `)
+        .join("");
+
+    document.getElementById("productReviews").innerHTML = product.reviews
+        .map(review => `
+            <div>
+                <h5>${review.title}</h5>
+                <p>${review.text}</p>
+                <small class="text-muted">${review.author}</small>
+            </div>
+            <hr>
+        `)
+        .join("");
+
+    document.getElementById("productQuestions").innerHTML = product.questions
+        .map(item => `
+            <p><strong>Q:</strong> ${item.question}</p>
+            <p><strong>A:</strong> ${item.answer}</p>
+            <hr>
+        `)
+        .join("");
+
+    document.getElementById("productOffers").innerHTML = product.offers
+        .map(offer => `<li>${offer}</li>`)
+        .join("");
+
+    document.getElementById("productSpecs").innerHTML = Object.entries(product.specifications)
+        .map(([key, value]) => `
+            <tr>
+                <th>${key}</th>
+                <td>${value}</td>
+            </tr>
+        `)
+        .join("");
+}
+
 const params = new URLSearchParams(window.location.search);
-
 const id = params.get("id");
-
 const product = products[id];
 
 if (product) {
-
-    document.getElementById("productName").innerText =
-        product.name;
-
-    document.getElementById("productPrice").innerText =
-        product.price;
-
-    document.getElementById("productOldPrice").innerText =
-        product.oldPrice;
-
-    document.getElementById("productImage").src =
-        product.image;
-
-    document.getElementById("productDescription").innerText =
-        product.description;
-
+    renderProduct(product);
+    window.currentProduct = product;
 } else {
-
     window.location.href = "index.html";
-
 }
 </script>
 

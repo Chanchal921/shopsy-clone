@@ -190,6 +190,7 @@ body{
     font-size:14px;
     padding:8px 0;
     transition:0.2s;
+    cursor: pointer;
 
 }
 
@@ -357,9 +358,12 @@ body{
 
 
 .dropdown-menu{
-    border:none;
-    border-radius:12px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    transform: translateX(-20px);
+    min-width: 180px;
+    z-index: 1000;
 }
 
 
@@ -610,7 +614,7 @@ body{
     }
 }
 
-
+/* ==== */
 .product-left{
     position: sticky;
     top: 90px;
@@ -629,6 +633,20 @@ body{
 body{
     overflow-x: hidden;
 }
+
+.product-card-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-card-link:hover {
+    text-decoration: none;
+}
+
+.card.product-card {
+    cursor: pointer;
+}
+
 .progress {
     background: #eeeeee;
     border-radius: 20px;

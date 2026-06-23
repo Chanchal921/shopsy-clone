@@ -3,16 +3,31 @@ $(document).ready(function () {
 
     // ADD TO CART
     
+    function addProductToCart(product) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(product.name + " added to cart!");
+    }
+
     $(".add-cart").click(function () {
+        if (window.currentProduct) {
+            addProductToCart(window.currentProduct);
+            return;
+        }
 
-        let productName = $(this)
-            .closest(".card")
-            .find("h6, h5")
-            .first()
-            .text()
-            .trim();
+        let card = $(this).closest(".card");
+        let priceText = card.find("p").eq(1).text().trim();
+        let prices = priceText.match(/₹\d+/g) || ["₹0", "₹0"];
 
-        alert(productName + " added to cart!");
+        let product = {
+            name: card.find("h6").text().trim(),
+            oldPrice: prices[0],
+            price: prices[1],
+            image: card.find("img").attr("src")
+        };
+
+        addProductToCart(product);
     });
     // ADD TO WISHLIST
     $(".add-wishlist").click(function () {
@@ -187,4 +202,4 @@ categorySection.addEventListener("mouseleave", () => {
         menu.classList.remove("show");
     });
 
-});        
+});

@@ -244,9 +244,9 @@ body{
 
 .offer-banner{
     width:100%;
-    height:140px;
+    height:auto;
     object-fit:cover;
-    border-radius:40px;
+    border-radius:20px;
     display:block;
 }
    /* CHAMPION TITLE */
@@ -308,10 +308,35 @@ body{
     transform:translateY(-5px);
     box-shadow:0 5px 20px rgba(0,0,0,0.12);
 }
-
 .product-card img{
+    width:100%;
     height:250px;
     object-fit:cover;
+}
+
+@media(max-width:576px){
+
+.product-card img{
+    height:150px;
+}
+
+.product-card h6{
+    font-size:14px;
+}
+
+.product-card p{
+    font-size:12px;
+    margin-bottom:4px;
+}
+
+.badge{
+    font-size:10px;
+}
+
+.card-body{
+    padding:10px;
+}
+
 }
 
 .product-card h6{
@@ -417,10 +442,26 @@ body{
         margin-top:10px;
     }
 
-    .navbar .container-fluid{
-        flex-direction:column;
-        gap:15px;
-    }
+    @media(max-width:768px){
+
+.navbar .container-fluid{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.search-box{
+    width:100%;
+    margin:0;
+}
+
+.d-flex.align-items-center.gap-4{
+    width:100%;
+    justify-content:space-around;
+}
+
+}
 
     .category-img{
         width:60px;
@@ -475,13 +516,17 @@ body{
 
 
 
+@media(max-width:768px){
+
 .category-item img{
-    width:64px;
-    height:64px;
-    object-fit:contain;
-    border:none;
-    border-radius:0;
-    background:transparent;
+    width:55px;
+    height:55px;
+}
+
+.category-item p{
+    font-size:13px;
+}
+
 }
 .category-item p{
     margin-top:10px;
@@ -658,4 +703,32 @@ body{
 
 .border.p-4 {
     padding: 25px !important;
+}
+.cart-icon{
+    position:relative;
+    display:inline-block;
+}
+
+.cart-count{
+    position:absolute;
+
+    top:-10px;
+    right:-10px;
+
+    width:18px;
+    height:18px;
+
+    background:red;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:11px;
+    font-weight:bold;
+
+    border:2px solid white;
 }

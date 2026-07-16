@@ -23,7 +23,7 @@
 
 <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg shadow-sm sticky-top py-3">
+<nav class="navbar navbar-expand-lg shadow-sm py-3">
 
     <div class="container-fluid px-4">
 
@@ -59,11 +59,17 @@
 
             </button>
 
-            <a href="cart.html"
-               class="nav-link">
+            <a href="cart.html" class="nav-link d-flex align-items-center">
+
+            <div class="cart-icon">
 
                 <i class="bi bi-cart3"></i>
-                Cart
+
+                <span id="cartCount" class="cart-count">0</span>
+
+            </div>
+
+            <span class="ms-2">Cart</span>
 
             </a>
 
@@ -691,7 +697,7 @@
 
     <div class="row g-4">
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=1" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product1.jpg" class="card-img-top">
@@ -705,7 +711,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=2" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product2.jpg" class="card-img-top">
@@ -719,7 +725,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=3" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product3.jpg" class="card-img-top">
@@ -733,7 +739,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=4" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product4.jpg" class="card-img-top">
@@ -747,7 +753,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=5" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product5.jpg" class="card-img-top">
@@ -761,7 +767,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=6" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product6.jpg" class="card-img-top">
@@ -775,7 +781,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=7" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product7.jpg" class="card-img-top">
@@ -789,7 +795,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=8" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product8.jpg" class="card-img-top">
@@ -803,7 +809,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=9" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product9.jpg" class="card-img-top">
@@ -817,7 +823,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=10" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product10.jpg" class="card-img-top">
@@ -831,7 +837,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=11" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product11.jpg" class="card-img-top">
@@ -845,7 +851,7 @@
             </a>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
             <a href="product.html?id=12" class="product-card-link">
                 <div class="card product-card">
                     <img src="assets/images/product12.jpg" class="card-img-top">
@@ -969,4 +975,3 @@ $(".add-cart").click(function(){
 
 </body>
 </html>
-

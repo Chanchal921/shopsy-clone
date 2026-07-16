@@ -1,13 +1,30 @@
+function updateCartCount() {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let count = document.getElementById("cartCount");
+
+    if (count) {
+        count.innerText = cart.length;
+    }
+
+}
 // SHOPSY CLONE SCRIPT
 $(document).ready(function () {
 
     // ADD TO CART
     
     function addProductToCart(product) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push(product);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert(product.name + " added to cart!");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert(product.name + " added to cart!");
     }
 
     $(".add-cart").click(function () {
@@ -123,14 +140,15 @@ $(document).ready(function () {
 
         let value = $(this).val().toLowerCase();
 
-        $(".product-card").filter(function () {
+        $(".col-lg-3").each(function () {
 
-            $(this).toggle(
-                $(this)
-                    .text()
-                    .toLowerCase()
-                    .indexOf(value) > -1
-            );
+            let text = $(this).text().toLowerCase();
+
+            if (text.indexOf(value) > -1 || value === "") {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
 
         });
 
@@ -148,6 +166,7 @@ $(document).ready(function () {
         }
 
     );
+    updateCartCount();
 
 });
 
